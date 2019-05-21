@@ -1,0 +1,30 @@
+### Technology stack
+
+```
+React Native 
+REST
+golang
+Mongodb
+Alexa
+```
+###
+```
+userapi
+paymentquery
+payment
+mail
+chat
+```
+
+Structs
+Payment
+id string
+from email/phonenumber
+to email/phonenumber
+amount
+
+User
+name
+email
+phonenumber
+
