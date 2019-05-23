@@ -3,23 +3,28 @@
  */
 package com.paynow.contactapi.pojo;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  * @author ravitejakommalapati
  *
  */
+@Document(collection = "contacts")
 public class Contact {
-private String id;
+@Id
+private String contactID;
 private String userID;
 private String firstName;
 private String lastName;
 private String phoneNumber;
 private String email;
 private boolean isSafe;
-public String getId() {
-	return id;
+public String getContactId() {
+	return contactID;
 }
-public void setId(String id) {
-	this.id = id;
+public void setContactId(String contactID) {
+	this.contactID = contactID;
 }
 public String getUserID() {
 	return userID;
@@ -59,11 +64,8 @@ public void setSafe(boolean isSafe) {
 }
 @Override
 public String toString() {
-	return "Contact [id=" + id + ", userID=" + userID + ", firstName=" + firstName + ", lastName=" + lastName
+	return "Contact [contactID=" + contactID + ", userID=" + userID + ", firstName=" + firstName + ", lastName=" + lastName
 			+ ", phoneNumber=" + phoneNumber + ", email=" + email + ", isSafe=" + isSafe + "]";
 }
-
-
-
 
 }
